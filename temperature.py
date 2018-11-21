@@ -37,7 +37,7 @@ def createJSON():
 		json.dump(data, json_file)
 
 def copy() :
-	copyfile('data.json','/var/www/html/raspberry-temperature/build/data.json')
+	copyfile('data.json','/var/www/html/raspberry-temperature/data.json')
 
 if os.path.isfile('data.json'):
 	print 'file found'
