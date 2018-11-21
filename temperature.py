@@ -28,8 +28,8 @@ def getDate():
 def writeCopyAndSleep():
 	while True:
 		writeToJSONFile(getDate(),getTemp())
-#		copy()
-		time.sleep(3600)
+		copy()
+		time.sleep(21600)
 
 def createJSON():
 	data = {}
@@ -37,7 +37,7 @@ def createJSON():
 		json.dump(data, json_file)
 
 def copy() :
-	copyfile('data.json','/var/www/html/raspberry-temperature/src/data.json')
+	copyfile('data.json','/var/www/html/raspberry-temperature/build/data.json')
 
 if os.path.isfile('data.json'):
 	print 'file found'
