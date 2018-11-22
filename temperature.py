@@ -29,7 +29,7 @@ def writeCopyAndSleep():
 	while True:
 		writeToJSONFile(getDate(),getTemp())
 		copy()
-		time.sleep(21600)
+		time.sleep(3600)
 
 def createJSON():
 	data = {}
