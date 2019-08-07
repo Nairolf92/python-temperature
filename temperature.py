@@ -33,11 +33,11 @@ def writeCopyAndSleep():
 
 def createJSON():
 	data = {}
-	with open('data.json', 'w') as json_file :
+	with open('/home/florian/temperature/data.json', 'w') as json_file :
 		json.dump(data, json_file)
 
 def copy() :
-	copyfile('data.json','/var/www/html/raspberry-temperature/data.json')
+	copyfile('data.json','/home/florian/portfolio/raspberry-temperature/data.json')
 
 if os.path.isfile('data.json'):
 	print 'file found'
