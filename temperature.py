@@ -33,7 +33,7 @@ def writeCopyAndSleep():
 
 def createJSON():
 	data = {}
-	with open('/home/florian/temperature/data.json', 'w') as json_file :
+	with open('/home/florian/scripts/temperature/data.json', 'w') as json_file :
 		json.dump(data, json_file)
 
 def copy() :
