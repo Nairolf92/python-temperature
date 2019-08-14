@@ -25,26 +25,25 @@ def getDate():
 	return date
 
 # Uncomment the copy() function if necessary
-def writeCopyAndSleep():
+def writeAndSleep():
 	while True:
 		writeToJSONFile(getDate(),getTemp())
-		copy()
 		time.sleep(3600)
 
 def createJSON():
 	data = {}
-	with open('/home/florian/scripts/temperature/data.json', 'w') as json_file :
+	with open('data.json', 'w') as json_file :
 		json.dump(data, json_file)
 
-def copy() :
-	copyfile('data.json','/home/florian/portfolio/raspberry-temperature/data.json')
+#def copy() :
+#	copyfile('data.json','/home/florian/portfolio/raspberry-temperature/data.json')
 
 if os.path.isfile('data.json'):
 	print 'file found'
-	writeCopyAndSleep()
+	writeAndSleep()
 else :
 	print 'file not found'
 	createJSON()
-	writeCopyAndSleep()
+	writeAndSleep()
 
 
